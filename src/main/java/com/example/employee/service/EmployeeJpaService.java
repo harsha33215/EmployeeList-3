@@ -62,6 +62,7 @@ public class EmployeeJpaService implements EmployeeRepository {
             if(employee.getDepartment() != null){
                 newEmployee.setDepartment(employee.getDepartment());
             }
+             employeeJpaRepository.save(newEmployee);
             return newEmployee;
         }
         catch (Exception e){
